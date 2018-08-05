@@ -34,6 +34,7 @@ class ThemeOptions {
 		setThemeOptionDefault('zpbase_indexlayout', 'index-grid');
 		setThemeOptionDefault('zpbase_galleryishome', true);
 		setThemeOptionDefault('zpbase_defaultalbum', 'album-grid');
+		setThemeOptionDefault('zpbase_albumsinmainmenu', false);
 		setThemeOptionDefault('zpbase_newsstyle', 'masonry-style');
 		setThemeOptionDefault('zpbase_searchlayout', 'search-masonry');
 		setThemeOptionDefault('zpbase_usenews', true);
@@ -169,7 +170,11 @@ class ThemeOptions {
 			gettext('Gallery Index is Homepage') => array('key' => 'zpbase_galleryishome', 'type' => OPTION_TYPE_CHECKBOX, 
 				'order' => 14.2,
 				'desc' => gettext("Uncheck to have a separate homepage (Home) and Gallery index page (Gallery).  If unchecked, the html (source) of the homepage comes form the Gallery Description in the Gallery options.")),
-			
+			gettext('Show albums in main menu') => array('key' => 'zpbase_albumsinmainmenu', 'type' => OPTION_TYPE_CHECKBOX,
+				'order'=>14.4,
+				'multilingual' => 0,
+				'desc' => gettext('Show albums in main menu (needs print_album_menu plugin).')),
+
 			array('type' => OPTION_TYPE_NOTE, 
 				'order' => 15,
 				'desc' => gettext('<h2>Disqus Commenting</h2><hr />')),			

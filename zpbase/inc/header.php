@@ -234,6 +234,9 @@ if (!defined('WEBPATH')) die();?>
 					</li>
 					<?php }
 					} ?>
+					<?php if (getOption('zpbase_albumsinmainmenu') && function_exists('printAlbumMenuList')) { ?>
+					<?php printAlbumMenuList('list', false, '','active open','submenu','active open','', NULL, false, false, false, NULL); ?>
+					<?php } ?>
 					<?php if (function_exists('printPageMenu')) { ?>
 					<?php printPageMenu('list','','active open','submenu','active open','',true,false); ?>
 					<?php } ?>
