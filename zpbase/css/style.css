@@ -185,6 +185,52 @@ margin:10px 0;
 text-align:center;
 }
 
+/* ---- album-list ---- */
+.image-list {
+margin: 0 -16px;
+margin: 0 -1rem;
+position: relative;
+}
+
+.image-list-unit {
+position:relative;
+overflow:auto;
+width:100%;
+margin:20px 0;
+}
+
+.image-list-separator {
+height:100%;
+width:4px;
+position:absolute;
+top:0;
+left:160px;
+background:rgba(34,25,25,0.4);
+}
+
+.image-list-unit .album-thumb {
+line-height:0;
+float:left;
+display:block;
+width:150px;
+text-align:right;
+}
+
+.image-list-unit img {
+max-width:150px;
+max-height:150px;
+}
+
+.image-list-unit h3 {
+margin:0;
+padding-left:175px;
+}
+
+.image-list-unit .album-desc {
+margin-top:0;
+padding-left:175px;
+}
+
 /* ---- album-masonry: masonry fluid, responsive grid album and homepage layout with infinite scroll ---- */
 #masonry-style{width:100%;margin:0 auto;opacity:0;}
 .masonry-style-item{
