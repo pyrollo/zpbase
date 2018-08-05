@@ -28,13 +28,13 @@ if (!defined('WEBPATH')) die();?>
 			break;
 		case 'album.php':
 			$zpbase_metadesc = truncate_string(getBareAlbumDesc(),150,'...');
-			$galleryactive = true;
+			$galleryactive = ! (getOption('zpbase_albumsinmainmenu') && function_exists('printAlbumMenuList'));
 			$objectclass = str_replace (" ", "", getBareAlbumTitle()).'-'.$_zp_current_album->getID();
 			$rss_option = 'Collection'; $rss_title = gettext('RSS Album Images');
 			break;
 		case 'image.php':
 			$zpbase_metadesc = truncate_string(getBareImageDesc(),150,'...');
-			$galleryactive = true;
+			$galleryactive = ! (getOption('zpbase_albumsinmainmenu') && function_exists('printAlbumMenuList'));
 			$objectclass = str_replace (" ", "", getBareImageTitle()).'-'.$_zp_current_image->getID();
 			break;
 		case 'archive.php':
